@@ -1,6 +1,6 @@
 import re
 texto = '''Holabab maestro. esta es la cadena 1. como estas mi capitan
-Esta es la linea 225654 linea de texto. 
+Esta es la linea 2256545 linea de texto.  150057 abababab
 y Esta la final (linea 3) definitiva mi capitan'''
 
 # HACIENDO BUSQUEDAS SIMPLES
@@ -49,6 +49,18 @@ y Esta la final (linea 3) definitiva mi capitan'''
 # {n} -> busca n cantidad de veces el valor de la izquierda
 # result = re.findall(r"\d{3}\s",texto)
 
-# {n,m} -> al menos n, como máximo m
-result = re.findall(r'(ab){2,4}', texto)
+# {n,m} -> al menos n coincidencias, m como máximo de coincidencias
+# result = re.findall(r'\d{1,5}', texto) # va a tomar la cantidad máxima de la búsqueda, aunque tenga más números ya que esto lo filtrara y dividirá.
+
+# (g){n} -> busca un grupo que se repita n veces 
+# (g){2} => 'gg gg' y devuelve solo ['g','g']
+# (g1){2} => 'g1g1 g1g1' y devuelve solo ['g1','g1']
+# result = re.findall(r'(ab){2}', texto)
+
+# [se]{n} -> busca una serie que se repita n veces 's' y 'e' y sus posibles 
+# aa,ab,ba,bb | ss se es ee
+# result = re.findall(r'[ab]{2}', texto) 
+
+# | -> busca una cosa o la otra
+result = re.findall(r'\d{2,4}|Hola', texto)
 print(result)
