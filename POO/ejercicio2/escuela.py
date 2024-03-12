@@ -14,6 +14,6 @@ class Estudiante(Persona):
     def presentarse_con_grado(self):
         return f'{super().presentarse()}, y actualmente curso el {self.grado} grado.'
 
-yo = Estudiante('Angel', 25, 9)
+estudiante = Estudiante('Angel', "25", "9no")
 
-print(yo.presentarse_con_grado())
+print(estudiante.presentarse_con_grado())
