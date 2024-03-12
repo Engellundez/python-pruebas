@@ -1,0 +1,4 @@
+# Crear la clase estudiante con los attr Nombre, Edad, Grado, y un metodo estudiar()
+# "el estudiante (nombre) está estudiando", crear el obj y correr metodo,
+# 
+# debe interactuar con el usuario y este debe brindar los atributos
