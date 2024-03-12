@@ -1,0 +1,9 @@
+Crear un juego de fuisión
+
+El juego consiste en crar personajes y que estos personajes se puedan fusionar para formar personajes más poderoso que tengan 
+más poder...
+
+Para ello debemos cambiar el comportamiento del operador "+" para que ccuando los personajes se fucionen, salga un nuevo
+personaje con habilides mejoradas.
+
+una posible formula es: el promedio de las habilidades de ambos al cuadrado! 
