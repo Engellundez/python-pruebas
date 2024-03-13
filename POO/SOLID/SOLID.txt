@@ -1,0 +1,6 @@
+SOLID viene por sus siglas
+S => SRP, Principio de responsabilidad único
+O => OCP, Principio de abierto/cerrado
+L => LSP, Principio de sustitución de Liskov
+I => ISP, Principio de segregación de interfaz
+D => DIP, Principio de inversión de dependencias

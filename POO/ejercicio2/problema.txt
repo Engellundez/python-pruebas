@@ -1,0 +1,22 @@
+Ejercicio de Herencia y uso de super:
+Crear un sistema para una escuela. En este sistema, vamos a tener dos clases principales: 
+Persona y Estudiante. La clase Persona tendrá los atributos de nombre y edad y un método que 
+imprima el nombre y la edad de la persona. La clase Estudiante heredará de la clase Persona y también tendra
+un atributo adicional: grado y un método que imprima el grado del estudiante.
+
+Deberás realizar super en el método de inicio (init) para reutilizar el código de la clase padre (Persona). 
+Luego crea una instancia de la clase Estudiante e imprime sus atributos y utiliza sus métodos para asegurarte 
+que todo funciona correctamente
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Imagina que estás modelando animales en un zoo. Crear Tres clases "Animal", "Mamífero" y "Ave". La clase Animal 
+debe tener un método llamado "comer". La clase "Mamífero" debe tener un método llamado "amamantar" y la clase "Ave" un método
+llamado volar.
+
+Ahora, crear una clase "Murciélago" que herede de "Mamífero" y "Ave", en ese orden, y por lo tanto debe ser capaz de 
+amamantar y volar, a de más de comer.
+
+finalmente juega con el orden de herencia de la clase "Murciélago" y observa cómo cambia el MRO y el comportamiento de los métodos al 
+usar super()
