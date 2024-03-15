@@ -15,7 +15,7 @@ class Personaje():
         return Personaje(nuevo_nombre, nueva_fuerza, nueva_velocidad)
     
 def clear():
-    os.system("clear")
+    os.system("cls")
     
 def mostrar_personajes():
     print('Estos son los personajes que se han creado.\n')
@@ -60,7 +60,7 @@ def solicitar_personaje(mensaje_input="Escoge un personaje: "):
 personajes = []
 
 while True:
-    clear()
+    # clear()
     opt = 0
     opt = solicitud_segura_int("""COMO SERIAN LA FUSIONES DE TUS PERSONAJES FAVORITOS \n
                 OPCIONES

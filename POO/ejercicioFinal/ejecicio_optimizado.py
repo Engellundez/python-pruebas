@@ -81,8 +81,8 @@ rangos = [
     ((0.6,1), Sentimiento("Muy positivo", "32"))
 ]
 
-# analizador = AnalizadorDeSentimientos(rangos,VerificaTextBlob())
-analizador = AnalizadorDeSentimientos(rangos,VerificaRandom())
+analizador = AnalizadorDeSentimientos(rangos,VerificaTextBlob())
+# analizador = AnalizadorDeSentimientos(rangos,VerificaRandom())
 
 # if __name__ == '__main__':
 while True:
