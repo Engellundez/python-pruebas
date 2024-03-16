@@ -4,7 +4,7 @@ import pyttsx3 as hablar
 # ocupa a Pillow para funcionar.
 import pyautogui as gui
 
-import SpeechRecognition
+# import SpeechRecognition
 
 sabina = hablar.init()
 
@@ -12,4 +12,4 @@ sabina.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices
 sabina.setProperty('rate', 170)
 sabina.say('Me vale verga perro, y abrace a la verga hijo de su puta medre, me vale verga a la verga')
 sabina.runAndWait()
-gui.write('Hola vamos a responder')
+# gui.write('Hola vamos a responder')
