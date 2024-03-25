@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla con parámetros</title>
+    <style>
+        li {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nombre canal: {{nombreCanal}}</h1>
+    <h2>Fecha actual: {{fechaActual.day}}/{{fechaActual.month}}/{{fechaActual.year}}</h2>
+    {# Este es un comentario que me sera de utilidad #}
+    <h3>N° de lenguajes: {{lenguajes|length}}</h3>
+    <ul>
+        {% for lang in lenguajes %}
+            {% if lang == 'Python' %}
+                <li style="color: #a68527;">{{lang}}</li>
+            {% else %}
+                <li>{{lang|first}} : {{lang|lower}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% comment %}
+        Este es un comentario que no
+        se va renderizar
+        y pueden ser más de una sola
+        linea
+    {% endcomment %}
+</body>
+</html>

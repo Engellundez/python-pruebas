@@ -1,0 +1,11 @@
+#navbar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#navbar li{
+    display: inline;
+    margin: 0 30px;
+}
