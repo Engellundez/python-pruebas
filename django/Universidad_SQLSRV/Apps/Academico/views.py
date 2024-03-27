@@ -1,11 +1,16 @@
 # from django.http import HttpResponse
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Curso
 
 # Create your views here.
+
+
 def home(request):
     # Get all data from db Curso
-    
+
     # obtener todo
     # cursos_list = Curso.objects.all()
     # obtener los primeros 5 registros
@@ -25,7 +30,29 @@ def home(request):
     # cursos_list = Curso.objects.all().filter(nombre__contains='g')
     # LIKE '%<data>'
     # cursos_list = Curso.objects.all().filter(nombre__endswith='n')
-    
+
     cursos_list = Curso.objects.all()
+
+    data = {
+        'title': 'Gestión de Cursos',
+        'cursos': cursos_list
+    }
+
+    return render(request, "gestionCursos.html", data)
+
+
+class CursoListView(ListView):
+    model = Curso
+    template_name = 'gestionCursos.html'
     
-    return render(request, "gestionCursos.html", {'cursos': cursos_list})
+    # podemos definir los datos a retornar
+    def get_queryset(self) -> QuerySet[Any]:
+        # retornamos todos los creditos <= a 4
+        return Curso.objects.filter(creditos__lte=4)
+
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context.update({'title': 'Gestión de Cursos'})
+        return context
+
+
