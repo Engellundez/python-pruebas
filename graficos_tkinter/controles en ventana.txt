@@ -1,0 +1,45 @@
+Para definir el modo en que deben colocarse los widgets dentro de la ventana tenemos 3 opciones
+    place
+    pack
+    grid
+
+Para construir las ventanas se pueden utilizar los widgets especiales (marcos, paneles, etc.) que actúan como
+contenedores de otros widgets. Estos se utilizan para agrupar varios controles.
+
+No deben mezclarse distintos métodos dentro de un mismo contenedor.
+
+PLACE (Posición absoluta)
+    Permite ubicar los elementos en su posición (X e Y) respecto de un elemento padre.
+    # Valores ABSOLUTOS pixeles
+    self.button.place(x=60, y=40, height=30, width=100)
+
+    # valores RELATIVOS % (relx, rely, relwidth, relheight) aceptan valores entre 0 y 1. (0% y 100%)
+    # 10%, 10%, 50%, 50%
+    button.place(relx=0.1, rely=0.1, relwidth=0.5, relheight=0.5)
+
+PACK (Posición relativa)
+    En lugar de especificar las coordenadas de un elemento, simplemente le decimos que debe ir arriba, abajo, 
+    a la izquierda o a la derecha respecto el contenedor.
+
+    si no indicamos ningún argumento, por defecto Tk posicionará los elementos uno arriba del otro y los centrara en el padre
+
+    cuando accedemos a pack también tenemos la propiedad (side=top, left, right, bottom) de modo, si indicamos que la caja de texto debe ir ubicada a la izquierda, los otros dos controles se seguirán manteniendo uno arriba del otro.
+
+    también permite los parámetros (after, before), que nos permiten controlar el orden en el que se ubican los elementos de la ventana. el siguiente ejemplo obliga a Tk a colocar la etiqueta self.label.pack(before=self.<other widget>)
+
+    al usar pack también tenemos las propiedades (padx, pady, ipadx, ipady) especifica en pixeles los margenes externos e internos de un elemento
+
+    al igual tenemos la propiedad expand(True/False) y fill(both, x (horizontal), y (vertical)) Especifican qué elementos deben 
+    expandirse o contraerse a medida que el tamaño de la ventana cambia, y en qué sentido deben hacerlo (vertical, horizontal o ambos)
+
+GRID Manejo en forma de grilla
+    consiste en dividir conceptualmente la ventana principal en filas (rows) y columnas (columns), formando celdas en donde se ubican
+    los elementos
+
+    también podemos agrandar la cantidad de columnas o filas que va a ocupar con (columnspan, rowspan)
+
+    también tenemos (rowconfigure, columnconfigure) con el parámetro (<referencia column/row>, weight=1) indicamos que la fila o columna se expande o contrae si la ventana cambia de tamaño (Este atributo debe de tenerlo la ventana propiamente)
+
+    al igual contamos con la propiedad (sticky) para que un control se posicione arriba, abajo, a la derecha o izquierda de la celda que 
+    lo contiene,se usa sticky con las posiciones (n(norte), s(sur), e(este), w(oeste)).
+    También se permite que el widget se expanda de forma horizontal (ew), vertical (ns) o en ambas direcciones (nsew)

@@ -1,0 +1,20 @@
+FRAME
+    Los Frames son marcos contenedores de otros widgets. pueden tener tamaño propio y posicionarse en distintos lugares de otro contenedor (ya sea la ventana u otro marco)
+
+    CONFIGURACIÓN
+        una vez que se define el frame 
+        ````python
+            # master => contenedor principal, ya sea la ventana u otro frame
+            w = Frame(master, options, ...)
+        ```
+    OPCIONES
+        # Cambia el tamaño
+        w.config(width, height)
+        # Cambia el color de fondo
+        w.config(bg)
+        # Cambia el grosor del borde
+        w.config(bd)
+        # Cambia el tipo de borde
+        w.config(relief='sunken')
+        # Cambia el cursor
+        w.config(cursor)

@@ -1,0 +1,12 @@
+Existen 3 formas de configurar un widget
+
+Accediendo a su constructor
+    miBoton = Botton(self,fg="red", bg="blue") # Fg hace referencia al texto y bg, hace referencia al fondo del elemento
+
+
+Método Config:
+    miBoton.config(fg="red", bg="blue")
+
+Accediendo directamente a la propiedad (como diccionario clave/valor)
+    miBoton["fg"]= "red"
+    miBoton.["bg"] = "blue"
