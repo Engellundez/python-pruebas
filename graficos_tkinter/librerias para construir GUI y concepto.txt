@@ -1,0 +1,17 @@
+Tkinter
+
+WxPython
+
+PyQT
+
+PyGTK
+
+CONCEPTO
+
+La estructura de ventana con Tkinter se debe de construir con los diferentes elementos dados, como seria 
+la Raíz (Ventana), 
+el Frame (Background) que también es un widget y 
+los widgets, que son los elementos con los que puede interactuar el usuario
+
+
+y a estos archivos se le pone la extención pyw, el w por window
