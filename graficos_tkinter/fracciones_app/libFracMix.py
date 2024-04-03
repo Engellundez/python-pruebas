@@ -1,4 +1,4 @@
-from .libFraccion import Fraccion
+from libFraccion import Fraccion
 
 class FracMix(Fraccion):
     def __init__(self, ent, num=0, den = 1):
@@ -8,7 +8,10 @@ class FracMix(Fraccion):
         super().simplifica()
     
     def __str__(self):
-        return str(self.ent) + super().__str__()
+        if self.ent == 0:
+            return super().__str__()
+        
+        return f'{self.ent} {super().__str__()}'
     
     def simplifica(self):
         if self.num > self.den:
@@ -44,6 +47,9 @@ class FracMix(Fraccion):
         r.simplifica()
         
         return r
+    
+    def __eq__(self, obj):
+        return (self.toFraccion() == obj.toFraccion())
     
     def __truediv__(self, obj):
         r = self.toFraccion() / obj.toFraccion()
