@@ -1,13 +1,5 @@
-from tkinter import ttk
-from tkinter import *
-import sqlite3
-
-
-class Product(Frame):
-    def __init__(self, window) -> None:
-        self.wind = window
-        self.wind.title('Products Application')
-
+from tkinter import Tk
+from src.product import Product
 
 def main():
     window = Tk()
